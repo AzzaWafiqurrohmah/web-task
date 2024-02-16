@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//route with controller
+Route::get('/belajar', [\App\Http\Controllers\BelajarLaravel::class, 'belajar']);
+
+//route without controller
+Route::get('/noController', function (){
+    return view('noController');
+});
